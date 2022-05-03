@@ -2,6 +2,7 @@ let accessToken;
 //if you are using API's, never leave the API data visible
 const clientId = 'cbf84a367da449e6907edff433b30a51';
 const redirectUri = 'https://jammingwithchris.surge.sh'; 
+// const redirectUri = 'http://localhost:3000';
 
 const Spotify = {
 
@@ -44,7 +45,8 @@ const Spotify = {
                     name: track.name,
                     artist: track.artists[0].name,
                     album: track.album.name,
-                    uri: track.uri
+                    uri: track.uri,
+                    preview: track.preview_url
                 }));
             });
         },

@@ -6,6 +6,7 @@ class Track extends React.Component {
         super(props);
         this.addTrack = this.addTrack.bind(this);
         this.removeTrack = this.removeTrack.bind(this);
+        this.playPreview=this.playPreview.bind(this);
     }
 
     renderAction() {
@@ -24,12 +25,17 @@ class Track extends React.Component {
         this.props.onRemove(this.props.track);
     }
 
+    playPreview() {
+        window.open(this.props.preview);
+    }
+
     render(){
         return (
             <div className="Track">
                 <div className="Track-information">
                     <h3>{this.props.track.name}</h3>
                     <p>{this.props.track.artist} | {this.props.track.album}</p>
+                    <a onClick={this.playPreview}>Preview</a>
                 </div>
                 {this.renderAction()}
             </div>
