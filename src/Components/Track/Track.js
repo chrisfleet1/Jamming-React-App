@@ -35,7 +35,7 @@ class Track extends React.Component {
                 <div className="Track-information">
                     <h3>{this.props.track.name}</h3>
                     <p>{this.props.track.artist} | {this.props.track.album}</p>
-                    <a onClick={this.playPreview}>Preview</a>
+                    <a href={this.playPreview} onClick={this.playPreview}>Preview</a>
                 </div>
                 {this.renderAction()}
             </div>
